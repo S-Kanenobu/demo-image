@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <title>3R Image Viewer</title>
+  <meta charset="UTF-8"/>
+</head>
+<body>
+
+  <h1>3R Image Viewer</h1>
+<!--画像の取込・画面への反映-->
+  <div id="dropArea" style = "border: 1px solid; padding: 30px; text-align: center;background-color: #767676;">
+    <!--元の画像-->
+    <img src="sample.png" id="outputImage" >
+    <!--加工後の画像-->
+    <canvas id="postProcessed" width="500" height="300"></canvas>
+  </div>
+  <h3>色調の調整
+    <br>
+    <br>
+    <button id="brightnessButton">&nbsp; &nbsp; &nbsp; &nbsp;明るさ&nbsp; &nbsp; &nbsp; &nbsp;</button>
+    <input type="range" id="brightnessRange" min="0.00" max="4.00" step="0.01">
+    &nbsp; &nbsp; 
+    <button id="contrastButton">&nbsp;コントラスト&nbsp;</button>
+    <input type="range" id="contrastRange" min="0.00" max="15.00" step="0.01">
+    &nbsp; &nbsp; 
+    <button id="hueButton">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;色相&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</button>
+    <input type="range" id="hueRange" min="0" max="1" step="0.01">
+    &nbsp; &nbsp; 
+    <button id="sarturationButton">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;彩度&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</button>
+    <input type="range" id="sarturationRange" min="0.00" max="1.00" step="0.01" value="1.00">
+  </h3>
+  <h3>エフェクト
+    <br>
+    <br>
+    <button id="sepiaButton">&nbsp; &nbsp; &nbsp; セピア色&nbsp; &nbsp; &nbsp; </button>
+    &nbsp; &nbsp; 
+    <button id="grayScaleButton">グレースケール</button>
+    &nbsp; &nbsp; 
+    <button id="invertButton">&nbsp; &nbsp; &nbsp;色の反転&nbsp; &nbsp; &nbsp; </button>
+  </h3>
+    <h3>調整可能なエフェクト
+      <br>
+      <br>
+      <button id="thresholdButton">&nbsp; 白黒の二値化&nbsp; </button>
+      <input type="range" id="thresholdRange" min="0" max="255" step="1" value="127">
+      &nbsp; &nbsp; 
+      <button id="transpalentButton">&nbsp; &nbsp; &nbsp; &nbsp; 透明度&nbsp; &nbsp; &nbsp; &nbsp; </button>
+      <input type="range" id="transpalentRange" min="0" max="255" step="1">
+      &nbsp; &nbsp; 
+      <button id="posterizationButton">&nbsp; &nbsp; 階調の変更&nbsp; &nbsp; </button>
+      <input type="range" id="posterizationRange" min="1" max="127" step="1">
+      &nbsp; &nbsp; 
+      <button id="pixelateButton">&nbsp; 六角形タイル&nbsp; </button>
+      <input type="range" id="pixelateRange" min="5" max="32" step="5" value="10">
+    </h3>
+    <h3>グラデーションをかけたエフェクト
+      <br>
+      <br>
+      <button id="blueRedButton">青赤エフェクト</button>
+      &nbsp; &nbsp; 
+      <button id="toyCameraButton">&nbsp; トイカメラ風&nbsp; </button>
+      &nbsp; &nbsp; 
+      <button id="retroButton">&nbsp; &nbsp; &nbsp; レトロ風&nbsp; &nbsp; &nbsp; </button>
+    </h3>
+      <br>
+        <button id="downloadButton">&nbsp; ダウンロード&nbsp; </button>
+  </h3>
+  <script src="main.js"></script>
+</body>
+</html>

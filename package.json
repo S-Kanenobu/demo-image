@@ -1,0 +1,24 @@
+{
+  "name": "3rimageviewer",
+  "version": "1.0.0",
+  "description": "TypeScript研修用プロジェクト",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "start": "npx webpack-dev-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/3r-software/3rimageviewer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/3r-software/3rimageviewer#readme",
+  "devDependencies": {
+    "ts-loader": "^8.0.4",
+    "typescript": "^4.0.3",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  }
+}
